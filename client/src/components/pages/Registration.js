@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {Form, Col, Button} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
@@ -52,7 +52,7 @@ function Registration() {
                    zip: registerForm.zip,
                    country: registerForm.country});
                        
-                   history.push('/');
+                   history.push('/confirmation');
                     
            }catch(err) {
                console.log(err);

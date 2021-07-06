@@ -18,10 +18,14 @@ body {
 
 
 img {
- 
   height: 10vh;
 }
 
+#confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #title {
   display: flex;
   justify-content: space-between;
