@@ -3,8 +3,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 
-const db = require('./backend/db');
-const userRouter = require('./backend/userRouter');
+const db = require('./backend/db.js');
+const userRouter = require('./backend/userRouter.js');
 const app = express();
 
 const PORT = process.env.PORT || 5000;
