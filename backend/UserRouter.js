@@ -29,11 +29,16 @@ router.post("/add", async (req, res) => {
         country: req.body.country,
         dateAdded: new Date()
      });
-
-     await user.save((err) => {
-         if (err) return res.sendStatus(400);
-         console.log("User added");
-     });
+     try {
+        await user.save((err) => {
+            if (err) return res.sendStatus(400);
+            console.log("User added");
+        })
+     }catch(err) {
+         console.log(err);
+         res.sendStatus(400);
+     }
+    
 
      res.sendStatus(200);
 })
