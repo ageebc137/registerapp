@@ -3,23 +3,12 @@ import { useHistory } from 'react-router';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-export default function Header() {
-    const history = useHistory();
-    const location = useLocation();
-    
-    const addUser = () => {
-        history.push("/register");
-    }
-
-    useEffect(() => {
-        console.log(location.pathname);
-
-    }, []);
+export default function Header(props) {
     return(
         <header>
             <div id="title">
                     <h1>Registration Database</h1>
-                    <Button onClick={addUser} >Add User</Button>
+                    <Button onClick={props.buttonFunction} >{props.buttonName}</Button>
             </div>  
         </header>
     );

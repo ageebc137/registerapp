@@ -1,9 +1,16 @@
 import {useEffect, useState} from 'react';
 import {Table} from 'react-bootstrap';
 import axios from 'axios';
+import Header from '../subcomponent/Header';
+import { useHistory } from 'react-router-dom';
 
 function Dashboard() {
     const [users, setUsers] = useState([]);
+    const history = useHistory();
+
+    function addUser() {
+        history.push("/register");
+    }
 
     useEffect(() => {
         async function fetchData() {
@@ -16,6 +23,7 @@ function Dashboard() {
     }, [])
     return (
         <>
+            <Header buttonFunction={addUser} buttonName={`Add User`} />
           <Table variant="dark" striped bordered hover>
             <thead>
                 <tr>

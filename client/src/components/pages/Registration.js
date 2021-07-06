@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {Form, Col, Button} from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import Header from '../subcomponent/Header';
 
 function Registration() {
 
@@ -28,6 +29,10 @@ function Registration() {
         zip: true,
         country: true
     });
+
+    const backToDashboard = () => {
+        history.push('/');
+    }
 
     const submitData = (e) => {
         e.preventDefault();
@@ -112,6 +117,8 @@ function Registration() {
     }
 
     return ( 
+        <>
+        <Header buttonFunction={backToDashboard} buttonName={'Back to Dashboard'} />
         <Form id="register-form">
         <Form.Row>
             <Form.Group as={Col} controlId="formGridFirstName">
@@ -250,6 +257,7 @@ function Registration() {
                 Submit
             </Button>
             </Form>
+        </>
    
     )
 }
