@@ -93,7 +93,7 @@ function Registration() {
              noError = false;
         }
 
-        if (registerForm.zip.trim().length !== 5 || !(/^\d+$/).test(registerForm.zip.trim())) {
+        if (!(registerForm.zip.trim().length == 5 || registerForm.zip.trim().length == 9) || !(/^\d+$/).test(registerForm.zip.trim())) {
             validatedForm.zip = false;
             noError = false;
         }

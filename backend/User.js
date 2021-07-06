@@ -57,7 +57,7 @@ const UserSchema = mongoose.Schema({
         required: true,
         validate: {
             validator: function(v) {
-                return v.length === 5 && (/^\d+$/).test(v.trim());
+                return (v.length === 5 || v.length === 9) && (/^\d+$/).test(v.trim());
             },
             message: 'Zip not formatted correctly'
         } 
