@@ -4,7 +4,7 @@ const cors = require('cors');
 const path = require('path');
 
 const db = require('./backend/db.js');
-const userRouter = require('./backend/userRouter.js');
+const userRouter = require('./backend/UserRouter.js');
 const app = express();
 
 const PORT = process.env.PORT || 5000;
