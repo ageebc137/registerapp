@@ -17,9 +17,15 @@ body {
 }
 
 
+img {
+ 
+  height: 10vh;
+}
+
 #title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #register-form {
